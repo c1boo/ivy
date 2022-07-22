@@ -497,12 +497,10 @@
 <span class="sd">    --------</span>
 <span class="sd">    With :code:`ivy.Array` input:</span>
 
-<span class="sd">    &gt;&gt;&gt; x = ivy.array([1,2,3])</span>
-<span class="sd">    &gt;&gt;&gt; print(ivy.result_type(x))</span>
-<span class="sd">    &lt;dtype:&#39;int32&#39;&gt;</span>
-
-<span class="sd">    &gt;&gt;&gt; print(ivy.result_type(x, &#39;int64&#39;))</span>
-<span class="sd">    &lt;dtype:&#39;int64&#39;&gt;</span>
+<span class="sd">    &gt;&gt;&gt; x = ivy.array([3, 4, 5])</span>
+<span class="sd">    &gt;&gt;&gt; y = ivy.array([3., 4., 5.])</span>
+<span class="sd">    &gt;&gt;&gt; print(ivy.result_type(x, y))</span>
+<span class="sd">    &lt;dtype:&#39;float64&#39;&gt;</span>
 
 <span class="sd">    With :code:`ivy.NativeArray` input:</span>
 
