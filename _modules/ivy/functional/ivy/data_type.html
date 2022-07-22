@@ -490,7 +490,7 @@
 
 <span class="sd">    This function conforms to the `Array API Standard</span>
 <span class="sd">    &lt;https://data-apis.org/array-api/latest/&gt;`_. This docstring is an extension of the</span>
-<span class="sd">    `docstring &lt;https://data-apis.org/array-api/latest/API_specification/generated/signatures.elementwise_functions.tan.html&gt;`_</span>
+<span class="sd">    `docstring &lt;https://data-apis.org/array-api/latest/API_specification/generated/signatures.data_type_functions.can_cast.html&gt;`_ </span>
 <span class="sd">    in the standard.</span>
 
 <span class="sd">    Examples</span>
@@ -499,22 +499,22 @@
 
 <span class="sd">    &gt;&gt;&gt; x = ivy.array([1,2,3])</span>
 <span class="sd">    &gt;&gt;&gt; print(ivy.result_type(x))</span>
-<span class="sd">    int32</span>
+<span class="sd">    &lt;dtype:int32&gt;</span>
 
 <span class="sd">    &gt;&gt;&gt; print(ivy.result_type(x, &#39;int64&#39;))</span>
-<span class="sd">    int64</span>
+<span class="sd">    &lt;dtype:int64&gt;</span>
 
 <span class="sd">    With :code:`ivy.NativeArray` input:</span>
 
 <span class="sd">    &gt;&gt;&gt; x = ivy.native_array([3., 4, 7.5])</span>
 <span class="sd">    &gt;&gt;&gt; y = ivy.native_array([3, 4, 7])</span>
 <span class="sd">    &gt;&gt;&gt; print(ivy.result_type(x, y))</span>
-<span class="sd">    float64</span>
+<span class="sd">    &lt;dtype:float64&gt;</span>
 
 <span class="sd">    With :code:`ivy.Dtype` input:</span>
 
 <span class="sd">    &gt;&gt;&gt; print(ivy.result_type(ivy.uint8, ivy.uint64))</span>
-<span class="sd">    uint64</span>
+<span class="sd">    &lt;dtype:uint64&gt;</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">current_backend</span><span class="p">(</span><span class="n">arrays_and_dtypes</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">result_type</span><span class="p">(</span><span class="n">arrays_and_dtypes</span><span class="p">)</span></div>
 
