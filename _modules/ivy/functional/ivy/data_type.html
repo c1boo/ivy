@@ -641,19 +641,19 @@
 <span class="sd">    &gt;&gt;&gt; x = ivy.array([3, 4, 5])</span>
 <span class="sd">    &gt;&gt;&gt; y = ivy.array([3., 4., 5.])</span>
 <span class="sd">    &gt;&gt;&gt; print(ivy.result_type(x, y))</span>
-<span class="sd">    &lt;dtype:&#39;float64&#39;&gt;</span>
+<span class="sd">    float64</span>
 
 <span class="sd">    With :code:`ivy.NativeArray` input:</span>
 
 <span class="sd">    &gt;&gt;&gt; x = ivy.native_array([3., 4, 7.5])</span>
 <span class="sd">    &gt;&gt;&gt; y = ivy.native_array([3, 4, 7])</span>
 <span class="sd">    &gt;&gt;&gt; print(ivy.result_type(x, y))</span>
-<span class="sd">    &lt;dtype:&#39;float64&#39;&gt;</span>
+<span class="sd">    float64</span>
 
 <span class="sd">    With :code:`ivy.Dtype` input:</span>
 
 <span class="sd">    &gt;&gt;&gt; print(ivy.result_type(ivy.uint8, ivy.uint64))</span>
-<span class="sd">    &lt;dtype:&#39;uint64&#39;&gt;</span>
+<span class="sd">    uint64</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">current_backend</span><span class="p">(</span><span class="n">arrays_and_dtypes</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">result_type</span><span class="p">(</span><span class="n">arrays_and_dtypes</span><span class="p">)</span></div>
 

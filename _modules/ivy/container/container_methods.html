@@ -2181,10 +2181,12 @@
 <span class="sd">    --------</span>
 <span class="sd">    &gt;&gt;&gt; x = ivy.Container(a = ivy.array([0, 1, 2]), \</span>
 <span class="sd">    b = ivy.array([3., 4., 5.]))</span>
-<span class="sd">    &gt;&gt;&gt; print(ivy.Container.result_type(x))</span>
+<span class="sd">    &gt;&gt;&gt;print(x.a.dtype, x.b.dtype)</span>
+<span class="sd">    int32 float32</span>
+<span class="sd">    print(ivy.Container.static_result_type(x, ivy.float64))</span>
 <span class="sd">    {</span>
-<span class="sd">        a: tf.int32,</span>
-<span class="sd">        b: tf.float32</span>
+<span class="sd">        a: float64,</span>
+<span class="sd">        b: float32</span>
 <span class="sd">    }</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">pass</span></div>
@@ -2234,8 +2236,8 @@
 
 <span class="sd">    &gt;&gt;&gt; print(x.result_type(x))</span>
 <span class="sd">    {</span>
-<span class="sd">        a:tf.float32,</span>
-<span class="sd">        b:tf.int32</span>
+<span class="sd">        a:float32,</span>
+<span class="sd">        b:int32</span>
 <span class="sd">    }</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">pass</span></div>
